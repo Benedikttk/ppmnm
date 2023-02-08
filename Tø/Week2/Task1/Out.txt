@@ -1,0 +1,7 @@
+Hej
+Hej fra Main
+Dette er en ny variable, hvorefter noget matematik står
+sqrt2^2 = 2 (should equal 2)
+2^(1/5) = 1,14869835499704
+pi^e = 22,459157718361
+e^pi = 23,1406926327793
