@@ -5,9 +5,8 @@ public static class main{
 	public static void Main(){
 		sfuns.print(); 
 		System.Console.Write("Hej fra Main\n");
-		sfuns.tekst = "Dette er en ny variable, hvorefter noget matematik står\n";
+			
 		sfuns.print();
-
 		double sqrt2=Sqrt(2.0);
 		Write($"sqrt2^2 = {sqrt2*sqrt2} (should equal 2)\n");
 	
@@ -22,11 +21,8 @@ public static class main{
 
 		double epi = Pow(E,PI);
 		Write($"e^pi = {epi}\n");
-
-
-
-
-
-
 	}
+							
+
+	
 }

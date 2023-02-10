@@ -1,0 +1,22 @@
+Dette er fra m(ath)funcs 
+Gamma(1) = 0,999999989064903
+Gamma(2) = 0,999999989064903
+Gamma(3) = 1,99999997812981
+Gamma(10) = 362879,997652016
+Gamma(0) with forloop = 0,999999989064903
+numbers.Count = 4
+Gamma(1) with forloop = 0,999999989064903
+numbers.Count = 4
+Gamma(2) with forloop = 1,99999997812981
+numbers.Count = 4
+Gamma(3) with forloop = 362879,997652016
+numbers.Count = 4
+Now we will try gamma and lngamma with a foreachloop
+lngamma(1) = 0,999999989064903
+gamma(1) = 0,999999989064903
+lngamma(2) = 0,999999989064903
+gamma(2) = 0,999999989064903
+lngamma(3) = 1,99999997812981
+gamma(3) = 1,99999997812981
+lngamma(10) = 12,8018274736111
+gamma(10) = 362879,997652016
