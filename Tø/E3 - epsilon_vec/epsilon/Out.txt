@@ -1,0 +1,16 @@
+my max int = 2147483647
+my min int = -2147483648
+double x = 2,22044604925031E-16
+float y = 1,192093E-07
+double x - float y = -1,19209289328737E-07
+Double machine epsilon =2,22044604925031E-16
+float machine epsilon =1,19209289550781E-07
+n =1000000
+sumA-1 = 0,000000e+000 should be 1,110223e-010
+sumB-1 = 1,110223e-010 should be 1,110223e-010
+ I think that the reason sumA dosent equal what it should is due to the fact that we start by assesing it a value of 1 where the tiny contributions wont count meaning sumA=1, så becaus they dont have a binary representation they get rounded to 0 becouse 1+ tiny stil equals 1 in binary, but tiny + tiny does not equal 0 in binary
+d1=7,999999999999999e-001=0.1+0.1+0.1+0.1+0.1+0.1+0.1+0.1
+d2=8,000000000000000e-001= 8*0.1
+is d1=d2; False
+That is because the decimal number 0.1 cannot be represented exactly as a 52-digit binary number
+Now we will use a function which we creat to solve this problem, it takes 2 arguments and 2 values to compare - > Two doubles in a finite digit representation can only be compared with the given absolute and/or relative precision (where the values for the precision actually depend on the task at hand and generally must be supplied by the user

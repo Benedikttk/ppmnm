@@ -1,7 +1,11 @@
 using static System.Console;
+using static System.Math;
+
+
 public class vec{
-public double x,y,z;
-	public vec (double a,double b,double c){ x=a; y=b; z=c; }
+	public double x,y,z;
+	public vec (double x,double y,double z)
+		{ this.x=x; this.y=y; this.z=z; }
 	public vec (){ x=y=z=0; }
 	public void print(string s){Write(s);WriteLine($"{x} {y} {z}");}
 
@@ -38,4 +42,8 @@ public double x,y,z;
 
 
 }
+
+
+
+
 

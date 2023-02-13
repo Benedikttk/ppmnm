@@ -25,7 +25,9 @@ public static class main{
 		w.print("a*5=");
 		WriteLine($"a%b={a%b}");
 
+		///approx
 		
+
 
 
 	}
