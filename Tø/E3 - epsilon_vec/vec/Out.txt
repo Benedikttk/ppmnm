@@ -19,4 +19,4 @@ a*5=15 20 25
 are these two vecotrs vector a: 3 4 5 and vector b: 4 5 6 equal -> False
 The crossproduct of a and b is (a X b)=-1 2 -1
 Croos product Norm(a) = 7,07106781186548
-3 4 5
+We have now written the vector a as a string ->3 4 5

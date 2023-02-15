@@ -52,7 +52,7 @@ public static class main{
 	///Task7	
 
 		string str_vec_a = a.ToString();
-		WriteLine(str_vec_a);
+		WriteLine($"We have now written the vector a as a string ->{str_vec_a}");
 
 	}
 }
