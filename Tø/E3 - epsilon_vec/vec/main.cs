@@ -40,8 +40,19 @@ public static class main{
 		///Task6
 
 		var test_2_vec = vec.approx(a,b);
+		WriteLine($"are these two vecotrs vector a: {a} and vector b: {b} equal -> {test_2_vec}");
+	
+		var cross_a_b = vec.cross(a,b);	
+		(cross_a_b).print("The crossproduct of a and b is (a X b)=");
+		
+		var norm_a = vec.norm(a);
+                WriteLine($"Croos product Norm(a) = {norm_a}");
 
 
+	///Task7	
+
+		string str_vec_a = a.ToString();
+		WriteLine(str_vec_a);
 
 	}
 }
