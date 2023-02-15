@@ -4,5 +4,6 @@ Out.txt : main.exe
 main.exe : main.cs          
 	mcs -out:main.exe main.cs
 
+
 clean:
-	rm --force Out.txt main.exe
+	rm --rf Out.txt main.exe

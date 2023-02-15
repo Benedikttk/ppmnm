@@ -2,12 +2,21 @@ using System;
 using static System.Console;
 using static System.Math;
 public static class main{
+
+	public static bool approx
+	(double a, double b, double acc=1e-9, double eps=1e-9){
+		if(Abs(b-a) < acc) return true;
+		else if(Abs(b-a) < Max(Abs(a),Abs(b))*eps) return true;
+		else return false;
+}
+
+
         public static void Main(){
 
 ///Task1 
 		{///start
 		int i = 1;
-	       
+	     	WriteLine("When a int i is given the start value, what is the maximal/minimal init value i can take:");  
 		while (i+1>i){i++;}
 		Write("my max int = {0}\n",i);
 		
@@ -16,9 +25,9 @@ public static class main{
 
 		}///end
 ///Task2 	
- 		
-		double x = 1;
+                WriteLine("The machine epsilon is the difference between 1.0 and the next representable floating point number. Using the while loop calculate the machine epsilon for the types float and double");
 
+		double x = 1;
 		while (1+x!=1){x/=2;} x*=2;
                 Write("double x = {0}\n",x);
 
@@ -26,12 +35,13 @@ public static class main{
 		float y=1F;
 	       	while ((float)(1F+y) != 1F){y/=2F;} y*=2F;
                 Write("float y = {0}\n",y);
-
+		
+		WriteLine("What is the difference between these two?");
 		Write("double x - float y = {0}\n",(x-y));
 
-
-		Write("Double machine epsilon ={0}\n",Pow(2,-52) );
-                Write("float machine epsilon ={0}\n",Pow(2,-23) );
+		WriteLine("They can also be writen as power functions");
+		Write("Double machine epsilon =2⁻²⁵={0}\n",Pow(2,-52) );
+                Write("float machine epsilon=2⁻²³={0}\n",Pow(2,-23) );
 
 
 ///Task3
@@ -76,6 +86,12 @@ public static class main{
 		Write("That is because the decimal number 0.1 cannot be represented exactly as a 52-digit binary number\n");
 
 		Write("Now we will use a function which we creat to solve this problem, it takes 2 arguments and 2 values to compare - > Two doubles in a finite digit representation can only be compared with the given absolute and/or relative precision (where the values for the precision actually depend on the task at hand and generally must be supplied by the user\n");
+
+
+
+		WriteLine($"are the numbers 4 and 5 equal -> {approx(4,5)}");
+		WriteLine($"are the numbers 4 and 4 equal -> {approx(4,4)}");
+
 
 
 

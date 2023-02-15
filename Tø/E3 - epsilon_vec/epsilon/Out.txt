@@ -1,10 +1,14 @@
+When a int i is given the start value, what is the maximal/minimal init value i can take:
 my max int = 2147483647
 my min int = -2147483648
+The machine epsilon is the difference between 1.0 and the next representable floating point number. Using the while loop calculate the machine epsilon for the types float and double
 double x = 2,22044604925031E-16
 float y = 1,192093E-07
+What is the difference between these two?
 double x - float y = -1,19209289328737E-07
-Double machine epsilon =2,22044604925031E-16
-float machine epsilon =1,19209289550781E-07
+They can also be writen as power functions
+Double machine epsilon =2⁻²⁵=2,22044604925031E-16
+float machine epsilon=2⁻²³=1,19209289550781E-07
 n =1000000
 sumA-1 = 0,000000e+000 should be 1,110223e-010
 sumB-1 = 1,110223e-010 should be 1,110223e-010
@@ -14,3 +18,5 @@ d2=8,000000000000000e-001= 8*0.1
 is d1=d2; False
 That is because the decimal number 0.1 cannot be represented exactly as a 52-digit binary number
 Now we will use a function which we creat to solve this problem, it takes 2 arguments and 2 values to compare - > Two doubles in a finite digit representation can only be compared with the given absolute and/or relative precision (where the values for the precision actually depend on the task at hand and generally must be supplied by the user
+are the numbers 4 and 5 equal -> False
+are the numbers 4 and 4 equal -> True
