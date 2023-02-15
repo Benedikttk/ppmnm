@@ -6,3 +6,6 @@ main.exe : main.cs vec.dll
 
 vec.dll : vec.cs 
 	mcs $< -target:library -out:$@
+
+clean : 
+	rm --force Out.txt hello.exe 

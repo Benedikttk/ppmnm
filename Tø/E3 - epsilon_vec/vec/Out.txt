@@ -1,9 +1,16 @@
+The public class vec, can be found in vec.cs and is read through the vec.llb. There you can see all of its opperations.
+We start by adding to vectors together, vector u and vector v.
 u=1 2 3
 v=2 3 4
 u+v=3 5 7
+
+ We now define 2 more vectors - a, b. and subtract them and make one of them negative.
 a=3 4 5
 b=4 5 6
 a-b=-1 -1 -1
 -a=-3 -4 -5
+
+ Now we see if we can do scallar multiplication on our vectors, with a scallar, w=a*5. Note that if using (5*a).print this will give a value, but (a*5).print will grant an error as it is a bug in all c programs.
 a*5=15 20 25
-a%b=62
+
+ We are now going to find the dot product between two vectors, a, v-> dot(a,v)=38
