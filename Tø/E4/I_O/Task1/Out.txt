@@ -1,0 +1,10 @@
+When x=1 we have that sin(x)=0,841470984807897 and that cos(x =0,54030230586814
+Here we have that for x=1 sin(x)>cos(x)
+When x=2 we have that sin(x)=0,909297426825682 and that cos(x =-0,416146836547142
+Here we have that for x=2 sin(x)>cos(x)
+When x=3 we have that sin(x)=0,141120008059867 and that cos(x =-0,989992496600445
+Here we have that for x=3 sin(x)>cos(x)
+When x=4 we have that sin(x)=-0,756802495307928 and that cos(x =-0,653643620863612
+Here we have that for x=4 sin(x)<cos(x)
+When x=5 we have that sin(x)=-0,958924274663138 and that cos(x =0,283662185463226
+Here we have that for x=5 sin(x)<cos(x)
