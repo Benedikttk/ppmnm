@@ -12,6 +12,7 @@ Student: Benedikt Tor Kristinsson -> Au_ID : AU664409
 Course Instructor: Dimitri Fedorov
 
 Progres:
+
 *** Excersises ***
 - 1.Introduction
 	Done
@@ -28,6 +29,14 @@ Progres:
 		input/output: done
 		complex: done
 		wiki:done
+- 6.More C-sharp: generics; delegates; closures.
+	Not Done -> E5 - generic_list
+- 7.Multithreading, multiprocessing, parallel computing.
+	Not Done -> E6 - multiprocessing
+- 8.Scientific plots with gnuplot/plotutils.
+	Not Done -> E7 - plots
+
+- 9
 
 
 *** Homework ***
