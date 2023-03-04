@@ -19,24 +19,16 @@ Progres:
 - 2.Code repositories. Makefiles.
 	Done
 - 3.Basics of C# programming.
-	Done -> E2-Math
+	Done 
 - 4.More Xsharp: conditionals, loops, classes.	
-	Done -> E3 - epsilon_vec
-		Epsilon: done
-		vec: done
+	Done 
 - 5.Input/output.
-	Done -> E4 - input/output; complex; Wiki.
-		input/output: done
-		complex: done
-		wiki:done
+	Done 
 - 6.More C-sharp: generics; delegates; closures.
 	Not Done -> E5 - generic_list
 - 7.Multithreading, multiprocessing, parallel computing.
 	Not Done -> E6 - multiprocessing
 - 8.Scientific plots with gnuplot/plotutils.
-	Not Done -> E7 - plots
-
-- 9
-
+	Done
 
 *** Homework ***
