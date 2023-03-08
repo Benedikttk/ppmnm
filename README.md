@@ -25,9 +25,9 @@ Progres:
 - 5.Input/output.
 	Done 
 - 6.More C-sharp: generics; delegates; closures.
-	Not Done -> E5 - generic_list
+	Done -> E5 - generic_list
 - 7.Multithreading, multiprocessing, parallel computing.
-	Not Done -> E6 - multiprocessing
+	Done -> E6 - multiprocessing
 - 8.Scientific plots with gnuplot/plotutils.
 	Done
 
