@@ -1,4 +1,4 @@
-Out.txt : main.exe 
+Out.txt : main.exe inputfile
 	mono main.exe $$(cat inputfile) > Out.txt
 
 lib.dll: genlist.cs
@@ -9,4 +9,4 @@ main.exe : main.cs lib.dll
 
 
 clean:
-	rm -rf Out.txt main.exe
+	rm -rf Out.txt main.exe *.dll
