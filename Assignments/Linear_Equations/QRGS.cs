@@ -20,11 +20,11 @@ public static class QRGS{
 
 	public static vector solve(matrix Q, matrix R, vector b){
 		vector x = Q.T*b;
-		for(int i=b.size-1;i>=0;i--){
+		for(int i=x.size-1;i>=0;i--){
 			double sum=0;
-			for(int k=i+1; k<b.size;k++)
-				sum+=R[i,k]*b[k];
-				b[i]=(b[i]-sum)/R[i,i];
+			for(int k=i+1; k<x.size;k++)
+				sum+=R[i,k]*x[k];
+				x[i]=(x[i]-sum)/R[i,i];
 		}
 		return x;
 	}
@@ -37,5 +37,18 @@ public static class QRGS{
 		}
 		return sum;
 	}	
+
+
+	public static matrix inverse(matrix Q, matrix R){
+		matrix B = new matrix(Q.size1, R.size2);
+		for(int i=0; i<Q.size2;i++){
+			vector e = new vector(Q.size2);
+			e[i]=1;
+			B[i] = QRGS.solve(Q,R,e);
+		}
+		return B;
+	}
+
+
 
 }
