@@ -1,0 +1,32 @@
+Matrix A with dimensions 3,3,
+ A=
+
+     0,712      0,419      0,432 
+     0,419      0,847      0,897 
+     0,432      0,897      0,627 
+V =
+
+   -0,0676      0,895      0,441 
+    -0,644     -0,376      0,666 
+     0,762     -0,239      0,602 
+D= 
+
+    -0,169          0   4,54e-10 
+ -3,42e-17       0,42   1,18e-15 
+  4,54e-10   1,05e-15       1,93 
+V.T*D*V=
+
+    -0,169  -4,51e-17   4,54e-10 
+  1,39e-17       0,42   1,31e-15 
+  4,54e-10   1,33e-15       1,93 
+Let a matrix reperesent a diagonal matrix I
+I=
+
+         1          0          0 
+         0          1          0 
+         0          0          1 
+Test1; is V^T*A*V=I? True
+Test2; is VDV^T = A? True
+Test3; is VV^T = I? True
+Test4; is V^TV = I? True
+mono main.exe -size:n, for an n x n symetrix matrix
