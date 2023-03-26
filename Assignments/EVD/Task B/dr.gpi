@@ -1,0 +1,12 @@
+set terminal svg background "white"
+set key bottom right
+set output "drplot.svg"
+set xlabel "{/Symbol d}r"
+set ylabel "{/Symbol e}"
+set tics out
+set xzeroaxis
+set yzeroaxis
+set samples 800
+set title "r_{max} = ${rmax}"
+plot [0:2][-1:0]  "dr.data" with lines linetype 1  title "Theory"
+
