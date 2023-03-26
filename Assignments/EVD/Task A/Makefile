@@ -4,7 +4,8 @@ RUN = mono
 all: Out.txt; cat $<
 
 Out.txt: main.exe
-	$(RUN) $< > $@
+	$(RUN) $< | sed -e 's/,/./g' > $@
+
 
 main.exe: main.cs  lib.dll
 	$(CSC) -reference:$(word 2,$^) $<

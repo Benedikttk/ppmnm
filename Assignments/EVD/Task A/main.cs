@@ -1,10 +1,14 @@
 using static System.Console;
 using System;
 using static System.Math;
+using System.Globalization;
+
 
 public class main{
 public static void Main(string[] args){
-	int n =3;
+	WriteLine("TASK A:");
+
+	int n =0;
 	foreach(string arg in args){
 		var words=arg.Split(':');
 		if(words[0]=="-size")n=int.Parse(words[1]);
@@ -41,14 +45,16 @@ public static void Main(string[] args){
 	matrix VVT = V*V.T;
 	matrix VTV = V.T*V;
 
-	WriteLine("Let a matrix reperesent a diagonal matrix I");
-	I.print("I=\n");
+	I.print("Let a matrix reperesent a diagonal matrix I\n I=\n");
 
 	WriteLine($"Test1; is V^T*A*V=I? {VTAV.approx(D)}");
 	WriteLine($"Test2; is VDV^T = A? {VDVT.approx(square_A)}");	
 	WriteLine($"Test3; is VV^T = I? {VVT.approx(I)}");
 	WriteLine($"Test4; is V^TV = I? {VTV.approx(I)}");
 	WriteLine("mono main.exe -size:n, for an n x n symetrix matrix");	
+
+
+
 
 	}
 }

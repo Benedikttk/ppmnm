@@ -1,0 +1,18 @@
+TASK A:
+Matrix A with dimensions 0.0.
+ A=
+
+V =
+
+D= 
+
+V.T*D*V=
+
+Let a matrix reperesent a diagonal matrix I
+ I=
+
+Test1; is V^T*A*V=I? True
+Test2; is VDV^T = A? True
+Test3; is VV^T = I? True
+Test4; is V^TV = I? True
+mono main.exe -size:n. for an n x n symetrix matrix
