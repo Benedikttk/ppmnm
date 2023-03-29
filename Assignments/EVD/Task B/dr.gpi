@@ -1,5 +1,5 @@
 set terminal svg background "white"
-set key bottom right
+set key center right
 set output "drplot.svg"
 set xlabel "{/Symbol d}r"
 set ylabel "{/Symbol e}"
@@ -7,6 +7,7 @@ set tics out
 set xzeroaxis
 set yzeroaxis
 set samples 800
-set title "r_{max} = ${rmax}"
-plot [0:2][-1:0]  "dr.data" with lines linetype 1  title "Theory"
+set title "Eigenvalues Hydrogen Energy Levels as a Function of r_{max}<<{/Symbol d}r"
+plot "dr.data" using 2:3 with linespoints linetype 1  title "First calculated Eigenvalues-{/Symbol y}(e_{1})",\
+ "dr.data" using 2:4 with linespoints linetype 1 lc rgb "blue" title "Second calculated Eigenvalues-{/Symbol y}(e_{2})"
 
