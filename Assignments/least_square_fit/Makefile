@@ -1,14 +1,11 @@
+ALL: decay.svg Out.txt
+
+
 Out.txt : main.exe
 	mono $< half_life > $@
 
-decay.svg : decay.gpi ruth.data fit.data
-	gnuplot $<
-
-fit.data : main.exe
-	mono $< plot > $@
-
 ruth.data : Makefile
-	>$@
+	>$@	
 	echo 1 117 5 >>$@
 	echo 2 100 5 >>$@
 	echo 3 88 5 >>$@
@@ -19,6 +16,12 @@ ruth.data : Makefile
 	echo 13 15.2 2 >>$@
 	echo 15 11.1 2 >>$@
 
+
+fit.data : main.exe ruth.data
+	mono $< plot | sed -e's/,/./g'> $@
+
+decay.svg : decay.gpi ruth.data fit.data
+	gnuplot $<
 
 lib.dll : jacobi.cs QRGS.cs matrix.cs vector.cs
 	mcs -target:library -out:$@ $^

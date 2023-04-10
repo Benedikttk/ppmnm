@@ -87,19 +87,51 @@ public static class main{
 		vector c_errors = fit_params.Item3;
 
 		double c_a = Math.Exp(bf[0]);
-		double c_lamda = -bf[1];
+		double c_lambda = -bf[1];
 
 		foreach(var arg in args){
 			if(arg == "plot"){
 				// data for the fit 
 				for(double x=0.01+1.0/128;x<=15;x+=1.0/64){
-					WriteLine($"{x} {c_a*Math.Exp(-c_lamda*x)}");
+					WriteLine($"{x} {c_a*Math.Exp(-c_lambda*x)}");
 				}
 			}
-		}	
+			if(arg == "half_life"){
+				matrix A = Tall_A.copy();
+				matrix R = new matrix(size_m,size_m);
+				QRGS.decomp(A,R);
+				
+				matrix test1 = A.T*A;
+				matrix test2 = A*R;
+				WriteLine("Task A");
+				WriteLine("Decomposition check");
+				R.set_unity();
+				if(test1.approx(R)){
+                        		WriteLine("Q_transpose * Q equals identity matrix.");
+                		}
+                		else{
+                        		WriteLine("Q_transpose * Q does not equal identity matrix");
+                		}
+                		if(Tall_A.approx(test2)){
+                        		WriteLine("QR is identical with original A.");
+                		}
+                		else{
+                        		WriteLine("QR is not equal to original A.\n");
+                		}
 
+			}
+			WriteLine("\n Task B");
+			WriteLine("Comparison of theoretical and Experimental half-life");
+			
+			double tau_t = 3.631;
+			double tau_exp = Math.Log(2)/c_lambda;
+			double tau_dev = ((tau_exp-tau_t)/tau_t)*100;
 
+			WriteLine($"Experimental halflife for 224Ra: {tau_exp}");
+			WriteLine($"Theoretical halflife valuefor 224Ra: {tau_t} ");
+			WriteLine($"Deviation between the theory and experimental results:{tau_dev} %");
 		
+		}	
 
 	}
 }
