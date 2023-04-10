@@ -2,6 +2,7 @@ using System;
 using static System.Console;
 using static System.Math;
 using static System.Random;
+using System.Diagnostics;
 
 public static class main{
 	//Least square class for fitting with errors	
@@ -93,7 +94,7 @@ public static class main{
 			if(arg == "plot"){
 				// data for the fit 
 				for(double x=0.01+1.0/128;x<=15;x+=1.0/64){
-					WriteLine($"{x} {c_a*Math.Exp(-c_lambda*x)}");
+					WriteLine($"{x} {c_a*Math.Exp(-c_lambda*x)}" );
 				}
 			}
 			if(arg == "half_life"){

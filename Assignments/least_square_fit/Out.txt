@@ -1,0 +1,10 @@
+Task A
+Decomposition check
+Q_transpose * Q equals identity matrix.
+QR is identical with original A.
+
+ Task B
+Comparison of theoretical and Experimental half-life
+Experimental halflife for 224Ra: 19,7160294998243
+Theoretical halflife valuefor 224Ra: 3,631 
+Deviation between the theory and experimental results:442,991724038125 %

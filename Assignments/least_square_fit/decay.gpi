@@ -10,4 +10,5 @@ set samples 800
 set key right top
 set title "Decay of ^{224}Ra"
 plot  "ruth.data" with yerrorbars pointtype 4 lc rgb "red" title "Data-point" \
-,"fit.data" with lines linetype 1 lc rgb "black" title "Theory"
+,"fit.data" using 1:2  with lines linetype 1 lc rgb "black" title "Theory" 
+
