@@ -1,0 +1,12 @@
+set terminal svg background "white"
+set key bottom right
+set output "Decay.svg"
+set xlabel "time [days]"
+set ylabel "ln(dN/dt) [N/s]"
+set tics out
+set xzeroaxis
+set yzeroaxis
+set samples 800
+set key right top
+set title "Decay of ^{224}Ra"
+plot  "ruth.data" with errorbars title "Data-point"
