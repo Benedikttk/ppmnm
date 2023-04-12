@@ -2,13 +2,12 @@ set terminal svg background "white"
 set key bottom right
 set output "Decay.svg"
 set xlabel "time [days]"
-set ylabel "ln(dN/dt) [N/s]"
+set ylabel "dN/dt [N/s]"
 set tics out
 set xzeroaxis
 set yzeroaxis
 set samples 800
 set key right top
 set title "Decay of ^{224}Ra"
-plot  "ruth.data" using ($1):(log($2)) with points pointtype 4 ps 0.5 lc rgb "red" title "Data-point" \
-,"fit.data" using 1:2  with lines linetype 1 lc rgb "black" title "Theory" 
+plot "exp.data" using ($1):($2):($3) with yerrorbars pointtype 4 ps 0.5 lc rgb "red" title "Data-point"
 

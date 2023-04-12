@@ -25,14 +25,11 @@ WriteLine("Task A\n");
         for(int i=0; i<n;i++)
                 b[i]+=rnd.NextDouble();
 
-	A.print("Here we have a random matrix A, \nA =\n");
-	R.print("Here we have a 0 matrix R, \nR =\n");	
 
 // we make a copy of A called Q that we will decomp on with R	
 	matrix Q = A.copy();	
 	QRGS.decomp(Q,R);
 
-	Q.print("Here we have matrix A ''Q'' after decomposition,\n Q=\n");
 	R.print("Here we have matrix R after decomposition, it is triangulare\n R=");
 
 	var QTQ =Q.T*Q;
@@ -52,7 +49,6 @@ WriteLine("Task A\n");
         }
 	matrix new_R = new matrix(n,n);
 
-	square_A.print("n x n Matrix");
 	matrix square_Q = square_A.copy();
 	QRGS.decomp(square_Q,new_R);
 //construct x solution to linear equations
@@ -72,5 +68,12 @@ WriteLine("Task B");
 
 	matrix mat_id_BA = B*square_A;
 	mat_id_BA.print("B*A=\n");
+
+	matrix id = new matrix(n,n);
+	for(int i=0;i<n;i++){
+		id[i,i]=1;
+	}
+
+	WriteLine($"A*B=I is {mat_id_AB.approx(id)}");
 }
 }

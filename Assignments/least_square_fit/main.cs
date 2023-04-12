@@ -23,8 +23,12 @@ public static class main{
 			matrix A_prod = A.T*A;
 			matrix R2 = new matrix(A_prod.size2, A_prod.size2);
 
-			QRGS.decomp(A, R);
-			vector c = QRGS.solve(A, R, b);
+			var Q=A.copy();
+			QRGS.decomp(Q, R);
+			vector c = QRGS.solve(Q, R, b);
+			c.print("  c=");
+			((A)*(c)).print("A*c=");
+			b.print("  b=");
 
 			QRGS.decomp(A_prod, R2);
 			matrix Cov = QRGS.inverse(A_prod, R2);
@@ -80,15 +84,21 @@ public static class main{
 		
 		for(int i=0;i<y.size;i++){
 			ln_y[i] = Log(y[i]);
-			ln_dy[i] = dy[i]/y[i];
+			//ln_dy[i] = dy[i]/y[i];
+			ln_dy[i] = 1;
 		}
 		
 		var fit_params = ls.lsfit(fs, t, ln_y, ln_dy);
 		vector bf = fit_params.Item1;
 		vector c_errors = fit_params.Item3;
+		bf.print(" bf=");
 
 		double c_a = Math.Exp(bf[0]);
 		double c_lambda = -bf[1];
+
+		for(int i=0;i<t.size;i++){
+			Error.WriteLine($"{t[i]} {ln_y[i]} {bf[0]+t[i]*bf[1]}");
+		}
 
 		foreach(var arg in args){
 			if(arg == "plot"){

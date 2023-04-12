@@ -1,3 +1,7 @@
+  c=      4,45     0,0474 
+A*c=       4,5       4,55       4,59       4,64       4,74       4,88       4,92       5,07       5,16 
+  b=      4,76       4,61       4,48       4,28       3,97       5,69       5,53       5,02       4,71 
+ bf=      4,45     0,0474 
 Task A
 Decomposition check
 Q_transpose * Q equals identity matrix.
@@ -5,6 +9,6 @@ QR is identical with original A.
 
  Task B
 Comparison of theoretical and Experimental half-life
-Experimental halflife for 224Ra: 19,7160294998243
+Experimental halflife for 224Ra: -14,6338077608587
 Theoretical halflife valuefor 224Ra: 3,631 
-Deviation between the theory and experimental results:442,991724038125 %
+Deviation between the theory and experimental results:-503,024174080382 %
