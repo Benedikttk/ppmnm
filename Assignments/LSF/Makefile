@@ -1,4 +1,4 @@
-ALL: decay.svg QRtest.txt
+ALL: decay.svg QRdeebug.txt
 
 exp.data : Makefile
 	>$@     
@@ -13,20 +13,23 @@ exp.data : Makefile
 	echo 15 11.1 2 >>$@
 
 
-decay.svg : decay.gpi exp.data
+decay.svg : decay.gpi exp.data fit.data
 	gnuplot $<
 
 
-lib.dll : LSF.cs jacobi.cs QRGS.cs matrix.cs vector.cs
+lib.dll : LSF.cs  QRGS.cs matrix.cs vector.cs
 	mcs -target:library -out:$@ $^
 
 
-QRtest.txt : main.exe 
-	mono $< QRtest | sed -e's/,/./g'> $@
+QRdeebug.txt : main.exe
+	mono $< QRdeebug | sed -e's/,/./g'> $@
+
+fit.data : main.exe
+	mono $< fit | sed -e's/,/./g'> $@
 
 main.exe : main.cs lib.dll
 	mcs -target:exe -out:$@ \
-		$(filter %.cs,$^) $(addprefix -reference:,$(filter %.dll,$^))
+                $(filter %.cs,$^) $(addprefix -reference:,$(filter %.dll,$^))
 
 clean:
 	rm -rf Out.txt main.exe lib.dll *.svg *.data plots/*
