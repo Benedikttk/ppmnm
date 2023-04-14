@@ -6,20 +6,22 @@ public static class QRGS
 {
     public static void decomp(matrix A, matrix R)
     {
-        int m = R.size1;
-        int n = R.size2;
+        int m = A.size2;
+        int n = A.size1;
+//	A.print("A=");
+//	R.print("R=");
 
-        if (m < n)
+        if (m > n)
         {
             throw new ArgumentException("Matrix A must have more rows than columns.");
         }
 
-        for (int i = 0; i < n; i++)
+        for (int i = 0; i < m; i++)
         {
             R[i, i] = A[i].norm();
             A[i] /= R[i, i];
 
-            for (int j = i + 1; j < n; j++)
+            for (int j = i + 1; j < m; j++)
             {
                 R[i, j] = A[i].dot(A[j]);
                 A[j] -= A[i] * R[i, j];
@@ -29,20 +31,22 @@ public static class QRGS
 
     public static vector solve(matrix Q, matrix R, vector b)
     {
-        int n = R.size1;
+        int m = R.size1;
 
+	/*
         if (R.size2 != n || Q.size1 != n || Q.size2 != n || b.size != n)
         {
             throw new ArgumentException("Matrix and vector dimensions must agree.");
         }
+	*/
 
         vector x = Q.T * b;
 
-        for (int i = n - 1; i >= 0; i--)
+        for (int i = m - 1; i >= 0; i--)
         {
             double sum = 0;
 
-            for (int k = i + 1; k < n; k++)
+            for (int k = i + 1; k < m; k++)
             {
                 sum += R[i, k] * x[k];
             }

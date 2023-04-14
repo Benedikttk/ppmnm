@@ -32,5 +32,5 @@ main.exe : main.cs lib.dll
                 $(filter %.cs,$^) $(addprefix -reference:,$(filter %.dll,$^))
 
 clean:
-	rm -rf Out.txt main.exe lib.dll *.svg *.data plots/*
+	rm -rf *.txt main.exe lib.dll *.svg *.data plots/*
 

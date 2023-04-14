@@ -32,7 +32,7 @@ public static class ls{
         }
 
         matrix Q = A.copy();
-        matrix R = new matrix(n,n);
+        matrix R = new matrix(m,m);
 
         QRGS.decomp(Q, R);
 

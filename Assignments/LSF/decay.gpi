@@ -9,5 +9,5 @@ set yzeroaxis
 set samples 800
 set key right top
 set title "Decay of ^{224}Ra"
-plot "exp.data" using ($1):($2):($3) with yerrorbars pointtype 4 ps 0.5 lc rgb "red" title "Data-point"
-
+plot "exp.data" using ($1):(($2)):(($3)) with yerrorbars pointtype 4 ps 0.5 lc rgb "red" title "Data-point",\
+ "fit.data" using (($1)):(($2)) with lines linetype 8 lc rgb "blue" title "Best fitted values"
