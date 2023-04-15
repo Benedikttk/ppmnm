@@ -70,7 +70,7 @@ static void Main(string[] args){
 			if(halflife_exp-halflife_error<=halflife_theory && halflife_theory<=halflife_exp+halflife_error){
 					WriteLine("Experiemental value for the halflife do agree with theory.");
 				}
-			else{WriteLine("Experimental values for the halflife do not agree with theory.");}
+			else{WriteLine("Experimental values for the halflife do not agree with theory.\n");}
 			
 			
 			//WriteLine($"c_lamda{c_lamda}"); c_lamda is negative becaouse we have fitted to a exponential increasing function when it should be decreasing, fix with a minus
