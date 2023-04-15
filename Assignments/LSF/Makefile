@@ -21,7 +21,6 @@ decay.svg : decay.gpi exp.data fit.data
 lib.dll : LSF.cs  QRGS.cs matrix.cs vector.cs
 	mcs -target:library -out:$@ $^
 
-
 Info.txt : main.exe
 	mono $< info | sed -e's/,/./g' > $@
 
