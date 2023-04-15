@@ -9,5 +9,15 @@ set yzeroaxis
 set samples 800
 set key right top
 set title "Decay of ^{224}Ra"
+set style fill transparent solid 0.2 noborder
+
+set label 1 "`sed -n '1p' Info.txt`" at screen 0.55, 0.17 center 
+
 plot "exp.data" using ($1):(($2)):(($3)) with yerrorbars pointtype 4 ps 0.5 lc rgb "red" title "Data-point",\
- "fit.data" using (($1)):(($2)) with lines linetype 8 lc rgb "blue" title "Best fitted values"
+"fit.data" using 1:2 with lines linetype 8 lc rgb "black" title "Best fitted values",\
+ "fit.data" using (($1)):(($3)) with lines linetype 1 lc rgb "red" title "Lower limit fit",\
+"fit.data" using (($1)):(($4)) with lines linetype 1 lc rgb "red" title "Upper limit fit",\
+ "fit.data" using 1:3:4 with filledcurves lc rgb 'red' title '{/Symbol s}(2)'
+
+
+

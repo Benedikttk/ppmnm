@@ -1,4 +1,5 @@
-ALL: decay.svg QRdeebug.txt
+ALL: Info.txt decay.svg
+
 
 exp.data : Makefile
 	>$@     
@@ -21,11 +22,11 @@ lib.dll : LSF.cs  QRGS.cs matrix.cs vector.cs
 	mcs -target:library -out:$@ $^
 
 
-QRdeebug.txt : main.exe
-	mono $< QRdeebug | sed -e's/,/./g'> $@
+Info.txt : main.exe
+	mono $< info | sed -e's/,/./g' > $@
 
 fit.data : main.exe
-	mono $< fit | sed -e's/,/./g'> $@
+	mono $< fit | sed -e's/,/./g' > $@
 
 main.exe : main.cs lib.dll
 	mcs -target:exe -out:$@ \

@@ -37,19 +37,46 @@ static void Main(string[] args){
 	return;
 */
 
-	double c_a = Math.Exp(bf[0]);
-	double c_lamda = bf[1];
+	double c_a = Math.Exp(bf[0]); //amplitude
+	double c_lamda = bf[1]; //decay constant
 
+	//Equation for deacay e^(ln(y)=ln(a)-λt).
 	foreach(var arg in args){
 		if(arg == "fit"){
 			//generate data for plotting the fit 
 			for(double x=0.1+1.0/128;x<=15;x+=1.0/64){
-				WriteLine($"{x} {(c_a*Math.Exp(c_lamda*x))} ");
+				double fit_val = c_a*Math.Exp(c_lamda*x);
+				double fit_val_err_sub = (c_a-c_errors[0])*Math.Exp((c_lamda-c_errors[1])*x);
+				double fit_val_err_add = (c_a+c_errors[0])*Math.Exp((c_lamda+c_errors[1])*x);
+				WriteLine($"{x} {fit_val} {fit_val_err_sub} {fit_val_err_add} ");
 			}
 			}
-		
+		if(arg == "info"){
+			double halflife_theory = 3.631;
+			double halflife_exp = Math.Log(2.0)/(-1*c_lamda);
+			double halflife_deviation = (halflife_theory/halflife_exp)*100;
+			
+			//will be using error-propagation to find uncerntainty of the calculated halflife
+			/*
+			 * y = ln(2)/l -> y(l)
+			 * e_y = |dy/dl|e_l
+			 * ln(2)|-1/(l²)|e_l
+			 * */
+			double halflife_error = Math.Log(2)/(c_lamda*c_lamda) * c_errors[1];  
+			string pm = "\u00B1";
+
+			WriteLine($"The expirimental halflife of ThX is {halflife_exp} {pm} {halflife_error}  [Days] \n The theoretical halflife is {halflife_theory} [Days]");			
+			WriteLine($"The Deviation from the theoretical value is {halflife_deviation} %");
+			if(halflife_exp-halflife_error<=halflife_theory && halflife_theory<=halflife_exp+halflife_error){
+					WriteLine("Experiemental value for the halflife do agree with theory.");
+				}
+			else{WriteLine("Experimental values for the halflife do not agree with theory.");}
+			
+			
+			//WriteLine($"c_lamda{c_lamda}"); c_lamda is negative becaouse we have fitted to a exponential increasing function when it should be decreasing, fix with a minus
+		}	
+
 		}
 
-	c_errors.print("c_erros=");
 	}//Main
 }//main

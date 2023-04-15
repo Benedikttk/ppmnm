@@ -1,0 +1,4 @@
+The expirimental halflife of ThX is 4.08004641904341 ± 0.166914715082983  [Days] 
+ The theoretical halflife is 3.631 [Days]
+The Deviation from the theoretical value is 88.9940855342354 %
+Experimental values for the halflife do not agree with theory.
