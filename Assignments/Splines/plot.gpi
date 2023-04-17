@@ -1,0 +1,15 @@
+set terminal svg background "white"
+set key bottom right
+set output "plot.svg"
+set xlabel "x-values"
+set ylabel "y-values"
+set tics out
+set xzeroaxis
+set yzeroaxis
+set samples 800
+set key right top
+set title "A really cool superlicious title"
+
+#set label 1 "`sed -n '1p' Info.txt`" at screen 0.55, 0.17 center 
+
+plot [0:15][0:15] "points.data" using (($1)):(($2)) with points pointtype 2 title "Not so random data"
