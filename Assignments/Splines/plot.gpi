@@ -12,4 +12,12 @@ set title "A really cool superlicious title"
 
 #set label 1 "`sed -n '1p' Info.txt`" at screen 0.55, 0.17 center 
 
-plot [0:15][0:15] "points.data" using (($1)):(($2)) with points pointtype 2 title "Not so random data"
+plot [0:15][0:15] "points.data" using (($1)):(($2)) with points pointtype 8 title "Not so random data",\
+"interpolate.data" using 1:2 with points pointtype 1 ps .3 lc rgb "black" title "interpolated values"
+
+set size 0.3, 0.3  # set the size of the smaller plot relative to the larger one
+set origin 0.6, 0.6  # set the position of the smaller plot within the larger one
+set title "Integral areea"
+plot 'integral.data' with lines
+
+unset multiplot  # reset the multiplot configuration

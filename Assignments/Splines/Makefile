@@ -1,8 +1,15 @@
-plot.svg : plot.gpi points.data
+plot.svg : plot.gpi points.data interpolate.data integral.data
 	gnuplot $<
 
 points.data : main.exe
-	mono $< points > $@
+	mono $< points  | sed -e's/,/./g' > $@
+
+interpolate.data : main.exe
+	mono $< interpolate | sed -e's/,/./g' >$@
+
+integral.data : main.exe
+	mono $< integral | sed -e's/,/./g' >$@
+
 
 main.exe : main.cs lib.dll
 	mcs -target:exe -out:$@ \
