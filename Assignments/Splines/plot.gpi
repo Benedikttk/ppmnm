@@ -1,6 +1,6 @@
 set terminal svg background "white"
 set key bottom right
-set output "plot.svg"
+set output "Plots.svg"
 set xlabel "x-values"
 set ylabel "y-values"
 set tics out
@@ -10,14 +10,25 @@ set samples 800
 set key right top
 set title "A really cool superlicious title"
 
-#set label 1 "`sed -n '1p' Info.txt`" at screen 0.55, 0.17 center 
 
+# First plot with points data
+#plot [0:15][0:15] "points.data" using (($1)):(($2)) with points pointtype 8 title "Not so random data",\
+#"interpolate.data" using 1:2 with points pointtype 1 ps .3 lc rgb "black" title "interpolated values"i
+
+set multiplot layout 1,2  # sets the layout to have 1 row and 2 columns
+
+# First plot with points data
 plot [0:15][0:15] "points.data" using (($1)):(($2)) with points pointtype 8 title "Not so random data",\
 "interpolate.data" using 1:2 with points pointtype 1 ps .3 lc rgb "black" title "interpolated values"
 
-set size 0.3, 0.3  # set the size of the smaller plot relative to the larger one
-set origin 0.6, 0.6  # set the position of the smaller plot within the larger one
-set title "Integral areea"
+# Second plot with line graph of integral data
+set size 0.5, 0.5  # set the size of the smaller plot relative to the larger one
+set origin 0.5, 0.5  # set the position of the smaller plot within the larger one
+set title "Integral"
+set xlabel "x-values"
+set ylabel "Integrated area"
+
+
 plot 'integral.data' with lines
 
 unset multiplot  # reset the multiplot configuration
