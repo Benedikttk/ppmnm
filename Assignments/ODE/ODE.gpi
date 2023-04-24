@@ -1,0 +1,19 @@
+set terminal svg background "white"
+set key top right
+set output "ODE.svg"
+set xlabel "x"
+set ylabel "y"
+set tics in
+set xzeroaxis
+set yzeroaxis
+set samples 800
+set multiplot 2,1
+
+set title "u'' = -u, u(x) = c_{1} sin(x) + c_{2} cos(x)"
+plot "Harmonic.data" with lines linetype 1 title "Solution u_{1}, c_{2}=0 ",\
+"Harmonic.data" using 1:3 with lines linetype 1 lc rgb "black" title "Solution u_{2}, c_{1}=0",\
+"Harmonic.data" using 1:4 with lines linetype 1 lc rgb "blue" title "u_{1}+u_{2}, c_{2}=c_{1}=1 "
+
+set title "Solution theta''(t) + b*theta'(t) + c*sin(theta(t)) = 0 "
+plot "Pendul.data" with lines linetype 1 title "theta(t) ",\
+"Pendul.data" using 1:3 with lines linetype 1 lc rgb "green" title "omega(t)"

@@ -1,5 +1,13 @@
+All: ODE.svg 
 
+ODE.svg: ODE.gpi Harmonic.data Pendul.data
+	gnuplot $<
 
+Harmonic.data: main.exe
+	mono $< Harmonic | sed -e's/,/./g' > $@
+
+Pendul.data: main.exe
+	mono $< Pendul | sed -e's/,/./g' > $@
 
 
 
