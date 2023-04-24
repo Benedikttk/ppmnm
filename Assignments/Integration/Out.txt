@@ -1,0 +1,4 @@
+Calculated Result 0.666953909054655 Answer 0.666666666666667. It works = True  
+Calculated Result 1.99996150007805 Answer 2. It works = True  
+Calculated Result 3.14183457802727 Answer 3.14159265358979. It works = True  
+Calculated Result -3.99991705899915 Answer -4. It works = True  
