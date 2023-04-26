@@ -1,4 +1,12 @@
+Test of integration for 4 functions.
 Calculated Result 0.666953909054655 Answer 0.666666666666667. It works = True  
 Calculated Result 1.99996150007805 Answer 2. It works = True  
 Calculated Result 3.14183457802727 Answer 3.14159265358979. It works = True  
 Calculated Result -3.99991705899915 Answer -4. It works = True  
+Comparison between new error function and old error function from plot-exercise.
+x-value	table-value	new deviation	old deviation
+0.1	0.112462916	2.23126093157333E-08	4.96221954915388E-08
+0.2	0.222702589	6.85451702675532E-07	1.31141684123204E-07
+0.5	0.520499878	4.90443762546366E-05	1.38304747210327E-07
+1	0.842700793	2.9165487198668E-05	1.03252410066368E-07
+2	0.995322265	0.000421946491062086	1.25418781138364E-07

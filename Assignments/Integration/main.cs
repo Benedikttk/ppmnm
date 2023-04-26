@@ -4,6 +4,21 @@ using static System.Math;
 
 public static class main{
 
+public class genlist<T>{
+	public T[] data;
+	public int size => data.Length;
+	public T this[int i] => data[i];
+	public genlist(){ data = new T[0]; }
+	public void add(T item){
+		T[] newdata = new T[size+1];
+		System.Array.Copy(data,newdata,size);
+		newdata[size]=item;
+		data=newdata;
+	}
+}
+
+
+
 	static double integrate(Func<double,double> f, double a, double b,
 			double acc=0.001, double eps=0.001, double f2=Double.NaN, double f3=Double.NaN){
 		double h=b-a;
@@ -33,7 +48,14 @@ public static class main{
 
 
 	/*Old error-function*/
-
+        public static double errf(double x){
+        /// single precision error function (Abramowitz and Stegun, from Wikipedia)
+                if(x<0) return -errf(-x);
+                double[] a={0.254829592,-0.284496736,1.421413741,-1.453152027,1.061405429};
+                double t=1/(1+0.3275911*x);
+                double sum=t*(a[0]+t*(a[1]+t*(a[2]+t*(a[3]+t*a[4]))));/* the right thing */
+                return 1-sum*Exp(-x*x);
+        }
 
 	/*New error-function*/
 	
@@ -68,11 +90,32 @@ public static class main{
 		foreach(var arg in args){
 			
 			if(arg == "Test"){
+				WriteLine("Test of integration for 4 functions.");
 				WriteLine($"Calculated Result {test1} Answer {answer1}, It works = {approx(test1, answer1)}  ");
                                 WriteLine($"Calculated Result {test2} Answer {answer2}, It works = {approx(test2, answer2)}  ");
                                 WriteLine($"Calculated Result {test3} Answer {answer3}, It works = {approx(test3, answer3)}  ");
                                 WriteLine($"Calculated Result {test4} Answer {answer4}, It works = {approx(test4, answer4)}  ");
+				
+				double[] z_values = {0.1, 0.2, 0.5, 1.0, 2.0};
+				double[] table_values = {0.112462916, 0.222702589, 0.520499878, 0.842700793, 0.995322265};
+				var new_erf = new genlist<double>();
+				var old_errf = new genlist<double>();
+				for(int i=0;i<z_values.Length;i++){
+					new_erf.add(Math.Abs(erf(z_values[i]) - table_values[i]));
+					old_errf.add(Math.Abs(errf(z_values[i]) - table_values[i]));
+				}
+				WriteLine("Comparison between new error function and old error function from plot-exercise.");
+				WriteLine($"x-value	table-value	new deviation	old deviation");
+				for(int i=0;i<z_values.Length;i++){
+				WriteLine($"{z_values[i]}	{table_values[i]}	{new_erf[i]}	{old_errf[i]}");
+				}
 
+			}
+			if(arg == "erfs"){
+				for(double x=-5+1.0/128;x<=5;x+=1.0/64){
+					WriteLine($"{x} {errf(x)+ .5} {erf(x)-.5} {erf(x)-errf(x)}");
+				}
+			
 			}
 
 
