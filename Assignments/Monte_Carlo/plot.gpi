@@ -1,0 +1,27 @@
+set terminal svg background "white"
+set key top right
+set output "figure.svg"
+set xlabel "N"
+set ylabel "error"
+set tics in
+set xzeroaxis
+set yzeroaxis
+set samples 800
+set title "Deviation of Monte Carlo simulation compared to estimated error (volume of half unit sphere)"
+
+set multiplot layout 2,1  # sets the layout to have 3 row and 1 columns
+
+plot [0:3000][0:.8]\
+ "mcint.data" with points pointtype 7 pointsize 0.2 title "estimated error" \
+, "actual_volume.data" with points pointtype 7 pointsize 0.2 title "actual deviation"\
+, "error_scale.data" with lines linetype 1 linewidth 1.5 linecolor "black" title "$1/\\sqrt{N}$"
+
+
+
+set title "ErrorDifference. Est-Act"
+set ylabel "{/Symbol D}E"
+plot [0:3000][-.5:.5]"error_div.data" using 1:2 with points pt 7 ps .2 title "Residualplot" 
+
+
+#set multiplot layout 1,2  # sets the layout to have 1 row and 2 columns
+unset multiplot  # reset the multiplot configuration
