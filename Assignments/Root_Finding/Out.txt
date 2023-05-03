@@ -1,1 +1,17 @@
 hello
+-------------------------------
+starting guesses x=82 y=1
+Solving 2 equations with 2 unknowns  
+ x-7y=-11
+ 5x+2y=-18	
+x=-4,00000000000001 and y=1
+Solving equation with 1 unknown 
+ x-11=0
+x=11
+Solving roots for the derivatives of f(x,y) = (1-x)2+100(y-x2)2
+  x=1,00001875246244  y=1,00003715805705
+Solving 3 equations with 3 unknowns  
+ 2x +2y z =20 
+ -3x-y-z=-18 
+ x+y+2z=16 
+x=2,99999999999997 y=5,00000000000008 z=3,99999999999999
