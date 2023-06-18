@@ -9,6 +9,7 @@ static void Main(string[] args){
 	double[] tdata  = new double[]{1  ,2,3,4,6,9,10,13,15};
 	double[] ydata  = new double[]{117,100,88,72,53,29.5,25.2,15.2,11.1};
 	double[] dydata = new double[]{5,5,5,4,4,3,3,2,2};
+/* vector t = new vector(1,2,3,4,6,9,10,13,15); */
 	
 	vector t =(vector)tdata;
 	vector y =(vector)ydata;
