@@ -13,6 +13,6 @@ set title "Akima (sub-)spline interpolation"
 
 # First plot with points data
 plot [-6:6][-2:2]"testpoints.data" using (($1)):(($2)) with points pointtype 6 title "Not so random data"
-
+plot "Akima.data" using (($1)):(($2)) with points pt 1 ps 0.1 title "Akima (sub-)spline interpolation"
 
 
