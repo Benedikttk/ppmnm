@@ -20,7 +20,7 @@ public class AkimaSpline
        	 	this.n = n;
     	}
 
-	public AkimaSpline Create(double[] x_data, double[] y_data) 	
+	public static AkimaSpline Create(double[] x_data, double[] y_data) 	
 	{/*Implentematation of Akima(sub-)spline interpolation for a points with x,y value*/
 		int n = x_data.Length;
 	
@@ -41,7 +41,7 @@ public class AkimaSpline
 			p[i] = (y_data[i+1]-y_data[i])/h[i];
 		}//for
 		
-		var s = new AkimaSpline(x=x_data, y=y_data, b=new double[n], c=new double[n - 1], d=new double[n - 1],n=n); //dosent want to work if Creat is static	
+		var s = new AkimaSpline(x_data, y_data, new double[n], new double[n - 1], new double[n - 1],n); //dosent want to work if Creat is static	
 		
 		Array.Copy(x_data, s.x, n);
 		Array.Copy(y_data, s.y, n);
