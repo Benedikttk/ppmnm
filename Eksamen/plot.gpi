@@ -1,0 +1,18 @@
+set terminal svg background "white"
+set key bottom right
+set output "Plots.svg"
+set xlabel "x-values"
+set ylabel "y-values"
+set tics out
+set xzeroaxis
+set yzeroaxis
+set samples 800
+set key right top
+set title "Akima (sub-)spline interpolation"
+
+
+# First plot with points data
+plot [0:15][-2:15]"testpoints.data" using (($1)):(($2)) with points pointtype 6 title "Not so random data"
+
+
+

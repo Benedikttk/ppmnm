@@ -1,10 +1,13 @@
-All : Out.txt Akima.data
+All : testpoints.data Akima.data plot.svg
 
 
-Out.txt : main.exe
+plot.svg : plot.gpi testpoints.data
+	gnuplot $<
+
+testpoints.data : main.exe
 	mono $< test | sed -e's/,/./g' > $@
 
-Akima.data: main.exe
+Akima.data : main.exe
 	mono $< AkimaSubSplineInetpolation | sed -e's/,/./g' > $@
 
 main.exe : main.cs lib.dll

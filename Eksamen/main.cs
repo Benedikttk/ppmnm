@@ -6,25 +6,19 @@ public class main
 {
     public static void Main(string[] args)
     {
-        // Test data
-        double[] xData = { 1.0, 2.0, 3.0, 4.0, 5.0 };
-        double[] yData = { 2.0, 4.0, 6.0, 8.0, 10.0 };
 
-        // Create AkimaSpline instance
-        AkimaSpline spline = AkimaSpline.Create(xData, yData);
-
-        // Test interpolation at a point
-        double z = 2.5;
-        double interpolatedValue = spline.Evaluate(z);
-        WriteLine($"Interpolated value at z={z}: {interpolatedValue}");
-
-        // Test interpolation at multiple points
-        double[] testPoints = { 1.5, 3.5 };
-        foreach (double point in testPoints)
-        {
-            double result = spline.Evaluate(point);
-            WriteLine($"Interpolated value at z={point}: {result}");
-        }
-    }
-}
+	foreach(var arg in args){
+		if(arg=="test"){
+			double[] xs = {1,2,3,4,5,6,7,8,9,10,11};
+			double[] ys = {0,0,0,6,4,12,12,1,0.5,3,5};
+			int l = xs.Length;
+			
+			for(int i=0;i<l;i++){
+				WriteLine($"{xs[i]+1} {ys[i]+1}");
+			}//for
+		}//if test
+	
+        }//foreach
+    }//Main
+}//main
 
