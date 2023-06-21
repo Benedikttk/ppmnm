@@ -24,8 +24,6 @@ public class AkimaSpline
 	{/*Implentematation of Akima(sub-)spline interpolation for a points with x,y value*/
 		int n = x_data.Length;
 	
-		//throw new ArgumentException("The Number of points must be larger than 2");
-
 		double[] h = new double[n-1];	//Differences between the x values
 		double[] p = new double[n-1];	//Slopes (dy/dx)
 	
@@ -75,13 +73,11 @@ public class AkimaSpline
 	public double Evaluate(double z)	//from Book Table 5
 	{/*Calculates the interpolated value of the spline at a point z*/
 		if(z<x[0] || z>x[n-1])
-			throw new ArgumentOutOfRangeException("z","The input value z is outside the range of the spline");
-		
+			throw new ArgumentOutOfRangeException("z","The input value z is outside the range of the spline");	
 		int i=0;
-		int j=i-1;
+		int j=n-1;
 		
 		while(j-i>1){
-		
 			int m=(i+j)/2;
 			if(z>x[m])
 				i=m;
