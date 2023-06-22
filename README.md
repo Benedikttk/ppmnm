@@ -1,3 +1,7 @@
+# Examination project: Number 2 - Akima sub-spline
+My assignment is to implement the Akima (sub-)spline interpolation. 
+
+
 # ppmnm
 
 | #  | homework      | A | B | C | Σ  |
