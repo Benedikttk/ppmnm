@@ -9,7 +9,7 @@ The AkimaSpline class has a private constructor that initializes the fields of t
 The Create method is a static method of the AkimaSpline class, which creates an instance of the AkimaSpline object. It takes the x-data and y-data arrays as input and calculates the coefficients of the Akima spline.
 The Evaluate method calculates the interpolated value of the spline at a given point z.
 
-Using the AkimaSpline: See [main.cs]([https://pages.github.com/](https://github.com/Benedikttk/ppmnm/blob/main/Eksamen/main.cs)).
+Using the AkimaSpline: See [main.cs](https://github.com/Benedikttk/ppmnm/blob/main/Eksamen/main.cs).
 
 
 
