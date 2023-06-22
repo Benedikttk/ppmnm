@@ -45,7 +45,7 @@ Using the AkimaSpline: See [main.cs](https://github.com/Benedikttk/ppmnm/blob/ma
 |                    total points: 58  |
  ======================================
 
-| #  | Exercises      Done/not Done   |
+| #  | [Exercises](https://github.com/Benedikttk/ppmnm/tree/main/T%C3%B8)      Done/not Done   |
  ======================================
 | 1  |          Done
 ---------------------------------------
