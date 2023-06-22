@@ -1,5 +1,10 @@
+#Information
+Heyy'o this is my repository for the course "praktisk programmering og numeriske metoder" [ppnm](https://kursuskatalog.au.dk/da/course/117654/Praktisk-programmering-og-numeriske-metoder)
+
+
 # Examination project: Number 2 - Akima sub-spline
 My assignment is to implement the Akima (sub-)spline interpolation. 
+I have used Inspiration from "Yet Another Introduction to Numerical Methods" version June 16, 2023, D.V. Fedorov [The Book](http://212.27.24.106:8080/prog/book/book.pdf) and has also been our curriculum.
 
 AkimaSpline.cs: 
 Here's a brief overview of the code: [AkimaSpline.cs](https://github.com/Benedikttk/ppmnm/blob/main/Eksamen/AkimaSpline.cs)
@@ -17,7 +22,7 @@ Using the AkimaSpline: See [main.cs](https://github.com/Benedikttk/ppmnm/blob/ma
 
  Once you have created the AkimaSpline object, you can then use its Evaluate method to calculate interpolated values at specific points, as shown in the code snippet in the previous response.
 
-# ppmnm
+# ppnm
 
 | #  | [homework](https://github.com/Benedikttk/ppmnm/tree/main/Assignments)      | A | B | C | Σ  |
  ======================================
