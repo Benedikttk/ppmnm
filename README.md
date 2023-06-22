@@ -20,7 +20,7 @@ Using the AkimaSpline: See [main.cs](https://github.com/Benedikttk/ppmnm/blob/ma
 
  In the provided code, the Create method is responsible for creating an instance of the AkimaSpline object. To create this instance, you need to pass in the x-array and y-array of values that you want to use for the Akima spline interpolation.
 
- Once you have created the AkimaSpline object, you can then use its Evaluate method to calculate interpolated values at specific points, as shown in the code [AkimaSpline.cs](https://github.com/Benedikttk/ppmnm/blob/main/Eksamen/AkimaSpline.cs).
+ Once you have created the AkimaSpline object, you can then use its Evaluate method to calculate interpolated values at specific points.
 
 # ppnm
 
