@@ -2,7 +2,7 @@
 My assignment is to implement the Akima (sub-)spline interpolation. 
 
 AkimaSpline.cs: 
-Here's a brief overview of the code:
+Here's a brief overview of the code: [AkimaSpline.cs](https://github.com/Benedikttk/ppmnm/blob/main/Eksamen/AkimaSpline.cs)
 
 The class AkimaSpline has private fields x, y, b, c, d, and n, representing the x-values, y-values, and the coefficients used in the Akima spline calculation.
 The AkimaSpline class has a private constructor that initializes the fields of the class.
@@ -19,7 +19,7 @@ Using the AkimaSpline: See [main.cs](https://github.com/Benedikttk/ppmnm/blob/ma
 
 # ppmnm
 
-| #  | homework      | A | B | C | Σ  |
+| #  | [homework](https://github.com/Benedikttk/ppmnm/tree/main/Assignments)      | A | B | C | Σ  |
  ======================================
 | 1  | LinEq         | 6 | 3 | 0 | 9  |
 ---------------------------------------
