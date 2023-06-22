@@ -1,6 +1,6 @@
-#Information
+# Information
 Heyy'o this is my repository for the course "praktisk programmering og numeriske metoder" [ppnm](https://kursuskatalog.au.dk/da/course/117654/Praktisk-programmering-og-numeriske-metoder)
-
+I am studying physics at Arhus Universit (2020/2023), I am taking this course in my sixth semester.
 
 # Examination project: Number 2 - Akima sub-spline
 My assignment is to implement the Akima (sub-)spline interpolation. 
