@@ -12,7 +12,7 @@ set title "Akima (sub-)spline interpolation"
 
 
 # First plot with points data
-plot [0:15][-1:10] "testpoints.data" using 1:2 with points pointtype 6 title "Not so random data",\
- "Akima.data" using 1:2 with points pt 1 ps 0.2 title "Akima (sub-)spline interpolation fit"
+plot [0:15][-1:10] "testpoints.data" using 1:2 with points pt 6 ps 0.5 title "Not so random data",\
+ "Akima.data" using 1:2 with lines linetype 1 lc rgb "red" title "Akima (sub-)spline interpolation fit"
 
 
