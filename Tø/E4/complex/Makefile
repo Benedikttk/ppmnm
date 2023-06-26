@@ -1,7 +1,10 @@
+ALL : Out.txt
+	cat $<
+
 Out.txt : main.exe
 	mono $^ > Out.txt
 
-DIR = /home/benedikttk/6_Semester_au/PragPropMedNumMet/Reposetory_ppmnm/ppmnm/Tø/E4/complex
+DIR = $(HOME)/6_Semester_au/PragPropMedNumMet/Reposetory_ppmnm/ppmnm/Tø/E4/complex
 
 
 lib.dll : $(DIR)/cmath.cs $(DIR)/complex.cs
