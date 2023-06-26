@@ -1,3 +1,6 @@
+All : lngamma.svg
+	eog $<
+
 lngamma.svg :lngamma.gpi lngamma.data 
 	gnuplot $<
 

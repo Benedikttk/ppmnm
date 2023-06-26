@@ -1,3 +1,6 @@
+All : Error.svg
+	eog $<
+
 Error.svg : error.gpi error.data error_factorials.data
 	gnuplot $<
 

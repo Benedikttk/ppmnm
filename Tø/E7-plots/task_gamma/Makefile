@@ -1,3 +1,6 @@
+ALL : Gamma.svg
+	eog $<
+
 Gamma.svg : gamma.gpi gamma.data factorials.data
 	gnuplot $<
 
