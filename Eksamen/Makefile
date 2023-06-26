@@ -4,6 +4,9 @@ All : testpoints.data Akima.data plot.svg
 plot.svg : plot.gpi testpoints.data
 	gnuplot $<
 
+rnddata.data: main.exe
+	mono $< rnddata | sed -e's/,/./g' > $@
+
 testpoints.data : main.exe
 	mono $< test | sed -e's/,/./g' > $@
 
