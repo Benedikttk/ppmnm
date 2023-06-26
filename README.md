@@ -9,7 +9,7 @@ I have used Inspiration from "Yet Another Introduction to Numerical Methods" ver
 # Overall Rating
 I would self-rate the [exam](https://github.com/Benedikttk/ppmnm/tree/main/Eksamen) to 9/10 points and I have a total of 70/100 points for the [Homework](https://github.com/Benedikttk/ppmnm/tree/main/Assignments) giving a final score of 7.6.
 
-A) 6 points. Implementing Akima (sub-)spline interpolation
+A) [6 points]. Implementing Akima (sub-)spline interpolation
 AkimaSpline.cs: 
 Here's a brief overview of the code: [AkimaSpline.cs](https://github.com/Benedikttk/ppmnm/blob/main/Eksamen/AkimaSpline.cs)
 
@@ -24,7 +24,7 @@ Using the AkimaSpline: See [main.cs](https://github.com/Benedikttk/ppmnm/blob/ma
 
  Once you have created the AkimaSpline object, you can use its Evaluate method to calculate interpolated values at specific points.
 
-B) 3 points. 
+B) [3 points.] 
 For the 3 extra points, I have granted them for making it read arbitrary randomized data of reasonable size and sort the points z in an increasing manner.
 
 
