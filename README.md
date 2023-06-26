@@ -11,7 +11,9 @@ I would rate my  [exam](https://github.com/Benedikttk/ppmnm/tree/main/Eksamen) a
 
 I have Rated the project in the following way:
 A) Implement the Akima (sub-)spline interpolation: [6 points]
+
           (Improvements to the A part)
+          
 B) Interpolating [3 Points]:
   * B1) Implementing the interpolation algorithm for 1 point:
   * B2) Handling edge cases and boundary conditions: 1 point
