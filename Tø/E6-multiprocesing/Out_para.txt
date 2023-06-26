@@ -1,0 +1,5 @@
+nterms=1000000000 nthreads=1
+nterms=1000000000 sum=35,9530134523465
+real 12.37
+user 50.97
+sys 0.02

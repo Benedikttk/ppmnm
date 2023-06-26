@@ -1,0 +1,44 @@
+nterms=100000000 nthreads=1
+master thread: now waiting for othrer threads...
+thread number 1 Starting value a=1 end value b=100000001
+thread number 1 partial sum = 18,9978964138526
+total sum = 18,9978964138526
+real 0.34
+user 0.33
+sys 0.01
+nterms=100000000 nthreads=2
+master thread: now waiting for othrer threads...
+thread number 2 Starting value a=50000001 end value b=100000001
+thread number 1 Starting value a=1 end value b=50000001
+thread number 1 partial sum = 18,3047492382933
+thread number 2 partial sum = 0,693147175559714
+total sum = 18,997896413853
+real 0.62
+user 1.20
+sys 0.01
+nterms=100000000 nthreads=3
+master thread: now waiting for othrer threads...
+thread number 3 Starting value a=66666667 end value b=100000001
+thread number 2 Starting value a=33333334 end value b=66666667
+thread number 1 Starting value a=1 end value b=33333334
+thread number 3 partial sum = 0,40546511560833
+thread number 2 partial sum = 0,693147173059905
+thread number 1 partial sum = 17,8992841251813
+total sum = 18,9978964138495
+real 0.45
+user 0.99
+sys 0.01
+nterms=100000000 nthreads=4
+master thread: now waiting for othrer threads...
+thread number 1 Starting value a=1 end value b=25000001
+thread number 2 Starting value a=25000001 end value b=50000001
+thread number 3 Starting value a=50000001 end value b=75000001
+thread number 4 Starting value a=75000001 end value b=100000001
+thread number 1 partial sum = 17,6116020677299
+thread number 4 partial sum = 0,287682070785091
+thread number 2 partial sum = 0,69314717056011
+thread number 3 partial sum = 0,4054651047748
+total sum = 18,9978964138499
+real 0.37
+user 1.13
+sys 0.01
