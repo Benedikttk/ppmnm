@@ -11,21 +11,9 @@ I would self-rate the [exam](https://github.com/Benedikttk/ppmnm/tree/main/Eksam
 
 A) [6 points]. Implementing Akima (sub-)spline interpolation
 AkimaSpline.cs: 
-Here's a brief overview of the code: [AkimaSpline.cs](https://github.com/Benedikttk/ppmnm/blob/main/Eksamen/AkimaSpline.cs)
-
-The class AkimaSpline has private fields x, y, b, c, d, and n, representing the x-values, y-values, and the coefficients used in the Akima spline calculation.
-The AkimaSpline class has a private constructor that initializes the fields of the class.
-The Create method is a static method of the AkimaSpline class, which creates an instance of the AkimaSpline object. It takes the x-data and y-data arrays as input and calculates the coefficients of the Akima spline.
-The Evaluate method calculates the interpolated value of the spline at a given point z.
-
-Using the AkimaSpline: See [main.cs](https://github.com/Benedikttk/ppmnm/blob/main/Eksamen/main.cs).
-
- In the provided code, the Create method is responsible for creating an instance of the AkimaSpline object. To create this instance, you must pass in the x-array and y-array of values you want to use for the Akima spline interpolation.
-
- Once you have created the AkimaSpline object, you can use its Evaluate method to calculate interpolated values at specific points.
 
 B) [3 points.] 
-For the 3 extra points, I have granted them for making it read arbitrary randomized data of reasonable size and sort the points z in an increasing manner.
+Making it read arbitrary randomized data of reasonable size and sort the points z in an increasing manner.
 
 # ppnm
 
