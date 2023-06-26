@@ -1,26 +1,26 @@
 # ppnm
 
-| #  | [homework](https://github.com/Benedikttk/ppmnm/tree/main/Assignments)      | A | B | C | Σ  |
+| #  | homework     | A | B | C | Σ  |
  ======================================
-| 1  | LinEq         | 6 | 3 | 0 | 9  |
+| 1  | [LinEq](https://github.com/Benedikttk/ppmnm/tree/main/Assignments/Linear_Equations)        | 6 | 3 | 0 | 9  |
 ---------------------------------------
-| 2  | EVD           | 6 | 3 | - |  9 |
+| 2  | [EVD](https://github.com/Benedikttk/ppmnm/tree/main/Assignments/EVD)           | 6 | 3 | - |  9 |
 ---------------------------------------
-| 3  | LeastSquares  | 6 | 3 | 1 |  10 |
+| 3  | [LeastSquares](https://github.com/Benedikttk/ppmnm/tree/main/Assignments/LSF)  | 6 | 3 | 1 |  10 |
 ---------------------------------------
-| 4  | Splines       | 6 | - | - |  6 |
+| 4  | [Splines](https://github.com/Benedikttk/ppmnm/tree/main/Assignments/Splines)       | 6 | - | - |  6 |
 ---------------------------------------
-| 5  | ODE       | 6 | - | - |  6 |
+| 5  | [ODE](https://github.com/Benedikttk/ppmnm/tree/main/Assignments/ODE)       | 6 | - | - |  6 |
 ---------------------------------------
-| 6  | Integration       | 6 | - | - |  6 |
+| 6  | [Integration](https://github.com/Benedikttk/ppmnm/tree/main/Assignments/Integration)       | 6 | - | - |  6 |
 ---------------------------------------
-| 7  | Monte Carlo       | 6 | - | - |  6 |
+| 7  | [Monte Carlo](https://github.com/Benedikttk/ppmnm/tree/main/Assignments/Monte_Carlo)       | 6 | - | - |  6 |
 ---------------------------------------
-| 8  | Root Finding       | 6 | - | - |  0 |
+| 8  | [Root Finding](https://github.com/Benedikttk/ppmnm/tree/main/Assignments/Root_Finding)       | 6 | - | - |  0 |
 ---------------------------------------
-| 9 | Minimization      | 0 | - | - |  0 |
+| 9 | [Minimization]      | 0 | - | - |  0 |
 ---------------------------------------
-| 10 | Neural Network     | 0 | - | - |  0 |
+| 10 | [Neural Network]     | 0 | - | - |  0 |
 ---------------------------------------
  ======================================
 |                    total points: 58  |
