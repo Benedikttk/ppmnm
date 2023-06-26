@@ -29,7 +29,7 @@ public class main
 			double endInterpValue = xTestData.Max();
 			
 			
-			for(double dx=startInterpValue+1.0/128;dx<=endInterpValue;dx+=1.0/64){
+			for(double dx=startInterpValue+1.0/128;dx<=endInterpValue;dx+=1.0/128){
 			
 				double interpolatedValue = spline.Evaluate(dx);
 				WriteLine($"{dx} {interpolatedValue}");
