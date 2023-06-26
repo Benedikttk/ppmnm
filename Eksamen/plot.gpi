@@ -7,12 +7,12 @@ set tics out
 set xzeroaxis
 set yzeroaxis
 set samples 800
-set key right top
+set key right bottom
 set title "Akima (sub-)spline interpolation"
 
 
 # First plot with points data
-plot "testpoints.data" using 1:2 with points pt 6 ps 0.5 title "Not so random data",\
+plot "testpoints.data" using 1:2 with points pt 7 ps 0.4 title "Random generated data",\
  "Akima.data" using 1:2 with lines linetype 1 lc rgb "red" title "Akima (sub-)spline interpolation fit"
 
 
