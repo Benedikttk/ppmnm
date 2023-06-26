@@ -1,6 +1,6 @@
 # ppnm
 
-| #  | homework     | A | B | C | Σ  |
+| #  | Homework     | A | B | C | Σ  |
  ======================================
 | 1  | [LinEq](https://github.com/Benedikttk/ppmnm/tree/main/Assignments/Linear_Equations)        | 6 | 3 | 0 | 9  |
 ---------------------------------------
