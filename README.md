@@ -27,8 +27,6 @@ Using the AkimaSpline: See [main.cs](https://github.com/Benedikttk/ppmnm/blob/ma
 B) [3 points.] 
 For the 3 extra points, I have granted them for making it read arbitrary randomized data of reasonable size and sort the points z in an increasing manner.
 
-
-
 # ppnm
 
 | #  | [homework](https://github.com/Benedikttk/ppmnm/tree/main/Assignments)      | A | B | C | Σ  |
