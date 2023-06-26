@@ -1,3 +1,6 @@
+ALL : Out.txt
+	cat $<
+
 Out.txt : main.exe inputfile
 	mono main.exe $$(cat inputfile) > Out.txt
 
