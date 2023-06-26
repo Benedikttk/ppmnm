@@ -6,4 +6,4 @@ main.exe : main.cs
 
 
 clean:
-	rm --rf Out.txt main.exe
+	rm -rf Out.txt main.exe
