@@ -69,25 +69,42 @@ public class AkimaSpline
 		return s;
 	}//Create
 
+public double Evaluate(double z)
+{
+    if (z < x[0])
+    {
+        // Handle case where z is less than the minimum x value
+        return y[0];
+    }
+    else if (z > x[n - 1])
+    {
+        // Handle case where z is greater than the maximum x value
+        return y[n - 1];
+    }
 
-	public double Evaluate(double z)	//from Book Table 5
-	{/*Calculates the interpolated value of the spline at a point z*/
-		if(z<x[0] || z>x[n-1])
-			throw new ArgumentOutOfRangeException("z","The input value z is outside the range of the spline");	
-		int i=0;
-		int j=n-1;
-		
-		while(j-i>1){
-			int m=(i+j)/2;
-			if(z>x[m])
-				i=m;
-			else
-				j=m;
-		}//while
+    int i = 0;
+    int j = n - 1;
 
-		double h = z-x[i];
-		double InterpolatedValues = y[i] + h*(b[i]+h*(c[i]+h*d[i]));
+    while (j - i > 1)
+    {
+        int m = (i + j) / 2;
+        if (z > x[m])
+        {
+            i = m;
+        }
+        else
+        {
+            j = m;
+        }
+    }
 
-		return InterpolatedValues;
-	}//Evaluate
+    double h = z - x[i];
+    double interpolatedValue = y[i] + h * (b[i] + h * (c[i] + h * d[i]));
+
+    return interpolatedValue;
+}
+
+
+
+
 }//AkimaSpline
