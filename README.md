@@ -7,13 +7,7 @@ My assignment is to implement the Akima (sub-)spline interpolation.
 I have used Inspiration from "Yet Another Introduction to Numerical Methods" version June 16, 2023, D.V. Fedorov [The Book](http://212.27.24.106:8080/prog/book/book.pdf), and this has also been part our curriculum.
 
 # Overall Rating
-I would self-rate the [exam](https://github.com/Benedikttk/ppmnm/tree/main/Eksamen) to 9/10 points and I have a total of 70/100 points for the [Homework](https://github.com/Benedikttk/ppmnm/tree/main/Assignments) giving a final score of 7.6.
-
-A) [6 points]. Implementing Akima (sub-)spline interpolation
-AkimaSpline.cs: 
-
-B) [3 points.] 
-Making it read arbitrary randomized data of reasonable size and sort the points z in an increasing manner.
+I would rate my  [exam](https://github.com/Benedikttk/ppmnm/tree/main/Eksamen) as 9/10 points. In my implementation, I successfully implemented the Akima sub-spline interpolation algorithm and improved it by adding error messaging and handling edge cases and boundary conditions of the dataset. Additionally, I ensured the smoothness of the interpolated curve that was sorted in an increasing manner. Overall, I believe I have met all the required objectives to earn a  score of 9 out of 10 points. I have a total of 70/100 points for the [Homework](https://github.com/Benedikttk/ppmnm/tree/main/Assignments).
 
 # ppnm
 
