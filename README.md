@@ -27,7 +27,7 @@ I would rate my  [exam](https://github.com/Benedikttk/ppmnm/tree/main/Eksamen) a
 ---------------------------------------
 | 7  | Monte Carlo       | 6 | - | - |  6 |
 ---------------------------------------
-| 8  | Root Finding       | 6 | - | - |  0 |
+| 8  | Root Finding       | 6 | - | - |  6 |
 ---------------------------------------
 | 9 | Minimization      | 6 | 3 | 1 |  10 |
 ---------------------------------------
