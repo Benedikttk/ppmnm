@@ -8,7 +8,7 @@
 ---------------------------------------
 | 3  | [LeastSquares](https://github.com/Benedikttk/ppmnm/tree/main/Assignments/LSF)  | 6 | 3 | 1 |  10 |
 ---------------------------------------
-| 4  | [Splines](https://github.com/Benedikttk/ppmnm/tree/main/Assignments/Splines)       | 6 | - | - |  6 |
+| 4  | [Splines](https://github.com/Benedikttk/ppmnm/tree/main/Assignments/Splines)       | 6 | 3 | - |  9 |
 ---------------------------------------
 | 5  | [ODE](https://github.com/Benedikttk/ppmnm/tree/main/Assignments/ODE)       | 6 | - | - |  6 |
 ---------------------------------------
@@ -18,7 +18,7 @@
 ---------------------------------------
 | 8  | [Root Finding](https://github.com/Benedikttk/ppmnm/tree/main/Assignments/Root_Finding)       | 6 | - | - |  0 |
 ---------------------------------------
-| 9 | [Minimization]      | 0 | - | - |  0 |
+| 9 | [Minimization]      | 6 | 3 | 1 |  10 |
 ---------------------------------------
 | 10 | [Neural Network]     | 0 | - | - |  0 |
 ---------------------------------------
