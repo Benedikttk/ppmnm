@@ -1,3 +1,6 @@
+ALL : Out.txt Makefile
+	cat $<
+
 plot.svg : plot.gpi points.data interpolate.data integral.data
 	gnuplot $<
 
@@ -18,7 +21,14 @@ main.exe : main.cs lib.dll
 lib.dll : vector.cs
 	mcs -target:library -out:$@ $^
 
+Out.txt : qspline.exe
+	mono $< > $@
+
+qspline.exe : qspline.cs lib.dll
+	mcs -target:exe -out:$@ \
+                $(filter %.cs,$^) $(addprefix -reference:,$(filter %.dll,$^))
+
 
 clean:
-	rm -rf *.txt main.exe lib.dll *.svg *.data plots/*
+	rm -rf *.txt *.exe lib.dll *.svg *.data plots/*
 

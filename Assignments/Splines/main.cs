@@ -45,6 +45,8 @@ public class main{
 		}
 
 	}//func
+	
+
 	static void Main(string[] args){
 		double[] xs = {1,3,4,7,9,12};
                 double[] ys = {1,3,6,10,10,9};
