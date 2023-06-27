@@ -9,6 +9,10 @@ using System.Text;
 
 public class main
 {
+
+	public static double Func(double x){ return Math.Sin(x);}
+
+
     public static void Main(string[] args)
     {
         var random = new Random();
@@ -24,6 +28,7 @@ public class main
         }
 
         Array.Sort(xTestData, yTestData);
+	
 
         foreach(var arg in args)
         {
@@ -34,6 +39,9 @@ public class main
                     WriteLine($"{xTestData[i]} {yTestData[i]}");
                 }
             }
+		
+	    		   
+	 
             else if(arg=="AkimaSubSplineInetpolation")
             {
                 var rnd_data = File.ReadAllText("testpoints.data").Split("\n");
@@ -68,6 +76,7 @@ public class main
                     WriteLine($"{dx} {interpolatedValue}");
                 }
             }
+
         }
 
     }//Main

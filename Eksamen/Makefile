@@ -1,4 +1,4 @@
-All : testpoints.data Akima.data plot.svg
+All : testpoints.data Akima.data plot.svg 
 
 
 plot.svg : plot.gpi testpoints.data
@@ -15,11 +15,12 @@ Akima.data : main.exe
 
 main.exe : main.cs lib.dll
 	mcs -target:exe -out:$@ \
-                $(filter %.cs,$^) $(addprefix -reference:,$(filter %.dll,$^))
+		$(filter %.cs,$^) $(addprefix -reference:,$(filter %.dll,$^))
+
 
 lib.dll : AkimaSpline.cs
 	mcs -target:library -out:$@ $^
 
 
 clean:
-	rm -rf *.txt main.exe lib.dll *.svg *.data
+	rm -rf *.exe lib.dll *.svg *.data

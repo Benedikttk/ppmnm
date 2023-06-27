@@ -18,12 +18,30 @@ public class AkimaSpline
         	this.c = c;
         	this.d = d;
        	 	this.n = n;
-    	}
+    	}//Private AkimaSpline
+
+
+	private static bool IsSorted(double[] array)
+	{
+		for(int i=1;i<array.Length;i++)
+		{
+			if(array[i]<array[i-1])
+				return false;
+		}
+		return true;
+	}//IsSorted
+
+
+
 
 	public static AkimaSpline Create(double[] x_data, double[] y_data) 	
 	{/*Implentematation of Akima(sub-)spline interpolation for a points with x,y value*/
 		int n = x_data.Length;
-	
+			
+		if(n<2){throw new ArgumentException("There are not enough data points, at least 2 data points");}
+
+		if(!IsSorted(x_data)){throw new ArgumentException("The x values must be in increasing manner");}
+			
 		double[] h = new double[n-1];	//Differences between the x values
 		double[] p = new double[n-1];	//Slopes (dy/dx)
 	
@@ -69,42 +87,33 @@ public class AkimaSpline
 		return s;
 	}//Create
 
-public double Evaluate(double z)
-{
-    if (z < x[0])
-    {
-        // Handle case where z is less than the minimum x value
-        return y[0];
-    }
-    else if (z > x[n - 1])
-    {
-        // Handle case where z is greater than the maximum x value
-        return y[n - 1];
-    }
+	public double Evaluate(double z)
+	{
+		if(z<x[0] || z>x[n-1]){throw new ArgumentOutOfRangeException(nameof(z),"The given inputvalue z is outside the range of the Spline");}
 
-    int i = 0;
-    int j = n - 1;
+   		if (z < x[0]){/* Handle case where z is less than the minimum x value*/ return y[0];}
+    		else if(z>x[n - 1]){/*Handle case where z is greater than the maximum x value*/ return y[n - 1];}
 
-    while (j - i > 1)
-    {
-        int m = (i + j) / 2;
-        if (z > x[m])
-        {
-            i = m;
-        }
-        else
-        {
-            j = m;
-        }
-    }
+    		int i=0;
+    		int j=n-1;
 
-    double h = z - x[i];
-    double interpolatedValue = y[i] + h * (b[i] + h * (c[i] + h * d[i]));
+    		while(j-i>1)
+    		{
+        		int m =(i+j)/2;
+        		if(z>x[m])
+        		{
+            			i=m;
+        		}
+        		else
+        		{
+            			j=m;
+        		}
+    		}
 
-    return interpolatedValue;
-}
-
-
-
+    		double h = z - x[i];
+    		double interpolatedValue = y[i] + h * (b[i] + h * (c[i] + h * d[i]));
+		/*Returning the intepoalated value, equation used can bee found in the Book*/
+    		return interpolatedValue;
+	}//Evaluate
 
 }//AkimaSpline
