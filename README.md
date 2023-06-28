@@ -29,9 +29,9 @@ I would rate my  [exam](https://github.com/Benedikttk/ppmnm/tree/main/Eksamen) a
 ---------------------------------------
 | 8  | Root Finding       | 6 | - | - |  6 |
 ---------------------------------------
-| 9 | Minimization      | 6 | 3 | 1 |  10 |
+| 9 | Minimization      | 6 | 3 | - |  9 |
 ---------------------------------------
-| 10 | Neural Network     | 0 | - | - |  0 |
+| 10 | Neural Network     | - | - | - |  0 |
 ---------------------------------------
  ======================================
 |                    total points: 58  |
