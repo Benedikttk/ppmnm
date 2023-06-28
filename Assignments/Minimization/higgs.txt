@@ -1,0 +1,5 @@
+Solving Breit-Wigner function. guess x = [-3. 3. 3]
+Solved (eps satisfied) x = [-25.8570266590692. 453.446863090846. 397957.392129312] at loop 2
+Breit-Wigner last value for fx =  -8.67e-11  -3.96e-17   1.13e-14 
+
+ Conclussion: The fit is not as expected. does not fit good. It should be shiftet more to the right.

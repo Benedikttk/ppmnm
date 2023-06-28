@@ -1,0 +1,16 @@
+set terminal svg background "white"
+set key bottom right
+set output "HiggsFitPlot.svg"
+set xlabel "Energy [GeV]"
+set ylabel "Signal sigma(Energy) [P(E)]"
+set tics out
+set xzeroaxis
+set yzeroaxis
+set samples 800
+set key right top
+set title "Higgs detection"
+plot  \
+ "higgs.data" with errorbars lc rgb "blue" title "Ex data", \
+ "fitdata.data" with lines lc rgb "red" title "Fit manually picked A=30, m=120, Gamma=4.0", \
+ "fitsdata.data" with lines lc rgb "black" title "Fit auto A=-26, m=454, Gamma=397938"
+

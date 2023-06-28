@@ -1,0 +1,8 @@
+
+Solving Rosenbrock's valley function. guess x = [-2. 3]
+Solved (eps satisfied) x = [-1.00000000002136. 1.00000000005635] at loop 1285
+Rosenbrock last value for fx =   5.54e-09   2.73e-09 
+
+Solving Himmelblau's function. guess x = [-3. 3]
+Solved (eps satisfied) x = [-2.80511808691788. 3.13131251825417] at loop 15
+Rosenbrock last value for fx =   2.27e-09   3.35e-10 
