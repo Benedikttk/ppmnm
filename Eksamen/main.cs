@@ -29,8 +29,7 @@ public class main
 
         Array.Sort(xTestData, yTestData);
 	
-
-        foreach(var arg in args)
+	foreach(var arg in args)
         {
             if(arg == "test")
             {
@@ -40,7 +39,63 @@ public class main
                 }
             }
 		
-	    		   
+	
+	    else if(arg=="AkimaSlope")
+	    {
+		    double[] x = { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12 };
+		    double[] y = { 11, 11, 10, 10, 13, 10, 13, 60, 62, 60, 13, 10, 10 };
+	
+			AkimaSpline spline = AkimaSpline.Create(x,y);
+			
+			for(double dx=x.Min()+1.0/1000;dx<=x.Max();dx+=1.0/1000){
+
+    				double interpolatedValue = spline.Evaluate(dx);
+
+				double slope = spline.GetSlope(dx);
+				WriteLine($"{dx} {interpolatedValue} {slope}");
+			}
+	    }
+		else if(arg=="dataPoints")
+		{
+                    double[] x = { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12 };
+                    double[] y = { 11, 11, 10, 10, 13, 10, 13, 60, 62, 60, 13, 10, 10 };
+
+			for(int i=0; i<x.Length-1;i++)
+			{
+				WriteLine($"{x[i]} {y[i]}");
+			}
+		}
+
+	    else if(arg=="CubeSlope")
+	    {	
+		        double[] x = { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12 };
+       			double[] y = { 11, 11, 10, 10, 13, 10, 13, 60, 62, 60, 13, 10, 10 };
+
+        // Build the cubic spline interpolation
+        int n = x.Length;
+        double[] b = new double[n];
+        double[] c = new double[n - 1];
+        double[] d = new double[n - 1];
+        double[] A = new double[n];
+        double[] D = new double[n];
+        double[] Q = new double[n];
+        double[] B = new double[n];
+
+        CubeSpline.cspline_build(x, y, b, c, d, A, D, Q, B);
+
+        // Interpolate values in a loop
+        double minX = x[0];
+        double maxX = x[n - 1];
+        double step = 1.0 / 1000;
+
+        for (double i = minX + step; i < maxX; i += step)
+        {
+            double interpolatedValue = CubeSpline.cspline_evaluate(x, y, b, c, d, i);
+            double slope = CubeSpline.cspline_diff(x, y, b, c, d, i);
+            WriteLine("{0} {1} {2}", i, interpolatedValue, slope);
+        }
+
+	    }		    
 	 
             else if(arg=="AkimaSubSplineInetpolation")
             {
@@ -76,6 +131,31 @@ public class main
                     WriteLine($"{dx} {interpolatedValue}");
                 }
             }
+		
+	    else if(arg=="Area")
+	    {
+
+		double[] x = { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12 };
+                double[] y = { 11, 11, 10, 10, 13, 10, 13, 60, 62, 60, 13, 10, 10 };
+		AkimaSpline spline = AkimaSpline.Create(x,y);
+
+		double a = x.Min();
+		double b = x.Max();
+
+		double area = spline.Integrate(a, b);
+		
+		WriteLine("Data Points");
+		for(int i=0; i<x.Length-1;i++)
+                        {
+                                WriteLine($"x={x[i]} and y={y[i]}");
+                        }
+
+		
+		WriteLine($"x=1.5, interpolated value={spline.Evaluate(1.5)}");
+		WriteLine($"Area under data poins between 0 and 12 using akima: {area}");
+
+
+	    }
 
         }
 

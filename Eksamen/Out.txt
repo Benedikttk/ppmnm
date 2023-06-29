@@ -1,0 +1,15 @@
+Data Points
+x=0 and y=11
+x=1 and y=11
+x=2 and y=10
+x=3 and y=10
+x=4 and y=13
+x=5 and y=10
+x=6 and y=13
+x=7 and y=60
+x=8 and y=62
+x=9 and y=60
+x=10 and y=13
+x=11 and y=10
+x=1.5. interpolated value=10.53125
+Area under data poins between 0 and 12 using akima: 282.5
