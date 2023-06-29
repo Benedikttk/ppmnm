@@ -16,12 +16,12 @@
 ---------------------------------------
 | 7  | [Monte Carlo](https://github.com/Benedikttk/ppmnm/tree/main/Assignments/Monte_Carlo)       | 6 | - | - |  6 |
 ---------------------------------------
-| 8  | [Root Finding](https://github.com/Benedikttk/ppmnm/tree/main/Assignments/Root_Finding)       | 6 | - | - |  0 |
+| 8  | [Root Finding](https://github.com/Benedikttk/ppmnm/tree/main/Assignments/Root_Finding)       | 6 | - | - |  6 |
 ---------------------------------------
-| 9 | [Minimization]      | 6 | 3 | 1 |  10 |
+| 9 | [Minimization](https://github.com/Benedikttk/ppmnm/tree/main/Assignments/Minimization)     | 6 | 3 | 1 |  10 |
 ---------------------------------------
 | 10 | [Neural Network]     | 0 | - | - |  0 |
 ---------------------------------------
  ======================================
-|                    total points: 58  |
+|                    total points: 70  |
  ======================================
