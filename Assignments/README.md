@@ -18,7 +18,7 @@
 ---------------------------------------
 | 8  | [Root Finding](https://github.com/Benedikttk/ppmnm/tree/main/Assignments/Root_Finding)       | 6 | - | - |  6 |
 ---------------------------------------
-| 9 | [Minimization](https://github.com/Benedikttk/ppmnm/tree/main/Assignments/Minimization)     | 6 | 3 | 1 |  10 |
+| 9 | [Minimization](https://github.com/Benedikttk/ppmnm/tree/main/Assignments/Minimization)     | 6 | 3 | 0 |  9 |
 ---------------------------------------
 | 10 | [Neural Network]     | 0 | - | - |  0 |
 ---------------------------------------
