@@ -117,75 +117,75 @@ public class AkimaSpline
 	}//Evaluate
 	
 	public double GetSlope(double z)
-    	{
-        if(z<x[0] || z>x[n-1])
-        {
-            throw new ArgumentOutOfRangeException(nameof(z), "The given input value z is outside the range of the Spline");
-        }
+	{
+    		if(z<x[0] || z>x[n-1])
+    		{
+        		throw new ArgumentOutOfRangeException(nameof(z), "The given input value z is outside the range of the Spline");
+    		}
 
-        int i=0;
-        int j=n-1;
+    		int i=0;
+    		int j=n-1;
 
-        while(j-i>1)
-        {
-            int m=(i+j)/2;
-            if(z>x[m])
-            {
-                i=m;
-            }
-            else
-            {
-                j=m;
-            }
-        }
+    		while(j-i>1)
+    		{
+        		int m=(i+j)/2;
+        		
+			if(z>x[m])
+        		{
+            			i=m;
+        		}
+        		else
+        		{
+            			j=m;
+        		}
+    		}
 
-        double slope = (y[i + 1] - y[i]) / (x[i + 1] - x[i]);
-        return slope;
-    }
+    		double slope = (y[i+1] - y[i]) / (x[i+1] - x[i]);
+    		return slope;
+	}
 
 
 
-public double Integrate(double a, double b)
-{
-    if (b <= a)
-    {
-        throw new ArgumentException("The upper limit (b) must be greater than the lower limit (a)");
-    }
+	public double Integrate(double a, double b)
+	{
+    		if(b<=a)
+    		{
+        		throw new ArgumentException("The upper limit (b) must be greater than the lower limit (a)");
+    		}
 
-    if (a < x[0] || b > x[n - 1])
-    {
-        throw new ArgumentOutOfRangeException("The integration limits are outside the range of the spline");
-    }
+    		if(a<x[0] || b>x[n-1])
+    		{
+        		throw new ArgumentOutOfRangeException("The integration limits are outside the range of the spline");
+    		}
 
-    int startIndex = Array.BinarySearch(x, a);
-    int endIndex = Array.BinarySearch(x, b);
+    		int startIndex = Array.BinarySearch(x, a);
+    		int endIndex = Array.BinarySearch(x, b);
 
-    if (startIndex < 0)
-    {
-        startIndex = ~startIndex - 1;
-    }
+    		if(startIndex<0)
+    		{
+        		startIndex= ~startIndex-1;
+    		}
 
-    if (endIndex < 0)
-    {
-        endIndex = ~endIndex - 1;
-    }
+    		if(endIndex<0)
+    		{
+        		endIndex= ~endIndex-1;
+    		}
 
-    double result = 0.0;
+    		double result = 0.0;
 
-    for (int i = startIndex; i < endIndex; i++)
-    {
-        double x1 = x[i];
-        double x2 = x[i + 1];
-        double y1 = Evaluate(x1);
-        double y2 = Evaluate(x2);
-        double dx = x2 - x1;
+    		for(int i=startIndex; i<endIndex; i++)
+    		{
+        		double x1 = x[i];
+        		double x2 = x[i + 1];
+        		double y1 = Evaluate(x1);
+        		double y2 = Evaluate(x2);
+        		double dx = x2 - x1;
 
-        result += ((y1 + y2) / 2.0) * dx;
-    }
+        		result += ((y1 + y2) / 2.0) * dx;
+    		}
 
-    return result;
-}
-
+    		return result;
+	}
 
 
 }//AkimaSpline

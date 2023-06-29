@@ -1,5 +1,5 @@
 set terminal svg background "white"
-set key top left
+set key top right
 set output "Compare.svg"
 set xlabel "x"
 set ylabel "y"

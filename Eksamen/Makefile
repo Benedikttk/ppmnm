@@ -38,4 +38,4 @@ lib.dll : AkimaSpline.cs CubeSpline.cs
 
 
 clean:
-	rm -rf *.exe lib.dll *.svg *.data
+	rm -rf *.exe lib.dll *.svg *.data Out.txt
